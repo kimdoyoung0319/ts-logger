@@ -1,5 +1,5 @@
-import { COLOR } from '../../enums';
-import { colorize } from '../../utils';
+import { COLOR } from '../../enums/index.js';
+import { colorize } from '../../utils/index.js';
 
 export const formatError = (error: Error): string => {
   const stackWithoutHeader = error.stack ? error.stack.split('\n').slice(1).join('\n') : '';

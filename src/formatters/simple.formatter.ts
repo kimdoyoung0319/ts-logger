@@ -1,6 +1,6 @@
-import { Formatter, FormatterPayload } from '../interfaces';
-import { colorize, getTimeStamp, isError, DEFAULT_LOG_LEVEL_COLORS, stringify } from '../utils';
-import { formatError } from './utils/error-formatter';
+import { Formatter, FormatterPayload } from '../interfaces/index.js';
+import { colorize, getTimeStamp, isError, DEFAULT_LOG_LEVEL_COLORS, stringify } from '../utils/index.js';
+import { formatError } from './utils/error-formatter.js';
 
 export class SimpleFormatter implements Formatter {
   format({ level, args, options }: FormatterPayload): string {

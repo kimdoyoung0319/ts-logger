@@ -1,7 +1,7 @@
-import { ConsoleTransport } from './transports/console.transport';
-import { COLOR, LOG_LEVEL } from './enums';
-import { Transport } from './transports';
-import { DEFAULT_LOG_LEVEL_COLORS } from './utils';
+import { ConsoleTransport } from './transports/console.transport.js';
+import { COLOR, LOG_LEVEL } from './enums/index.js';
+import { Transport } from './transports/index.js';
+import { DEFAULT_LOG_LEVEL_COLORS } from './utils/index.js';
 
 export interface LoggerOptions {
   name?: string;
@@ -41,7 +41,7 @@ export class Logger {
     if (this.options.suppress) {
       return;
     }
-    
+
     for (const transport of this.options.transports!) {
       if (level < transport.options.threshold!) {
         return;

@@ -1,5 +1,5 @@
-import { Formatter, FormatterPayload } from '../interfaces';
-import { getTimeStamp, isError, stringify } from '../utils';
+import { Formatter, FormatterPayload } from '../interfaces/index.js';
+import { getTimeStamp, isError, stringify } from '../utils/index.js';
 
 export class JsonFormatter implements Formatter {
   format({ level, args, options }: FormatterPayload): string {
@@ -7,7 +7,7 @@ export class JsonFormatter implements Formatter {
       level,
       ...this.parse(args),
       ...(options?.timestamp && { timestamp: getTimeStamp(options?.timestamp) }),
-      ...(options?.name && { name: options?.name }),
+      ...(options?.name && { name: options?.name })
     };
 
     return stringify(logData);

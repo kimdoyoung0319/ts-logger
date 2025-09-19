@@ -1,4 +1,4 @@
-import { Transport, TransportOptions, TransportPayload } from './transport';
+import { Transport, TransportOptions, TransportPayload } from './transport.js';
 
 export interface ConsoleTransportOptions extends TransportOptions {
   fullFormat?: boolean;

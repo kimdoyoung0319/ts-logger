@@ -1,2 +1,2 @@
-export * from './log-level';
-export * from './color';
+export * from './log-level.js';
+export * from './color.js';

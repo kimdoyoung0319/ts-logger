@@ -1,2 +1,2 @@
-export * from './json.formatter';
-export * from './simple.formatter';
+export * from './json.formatter.js';
+export * from './simple.formatter.js';

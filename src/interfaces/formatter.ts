@@ -1,4 +1,4 @@
-import { LOG_LEVEL } from '../enums';
+import { LOG_LEVEL } from '../enums/index.js';
 
 export interface FormatterPayload {
   level: LOG_LEVEL;

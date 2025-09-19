@@ -1,6 +1,6 @@
-import { Transport, TransportOptions, TransportPayload } from './transport';
-import { writeFileSync } from 'fs';
-import { join } from 'path';
+import { Transport, TransportOptions, TransportPayload } from './transport.js';
+import { writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 type LOG_ROTATION = 'daily' | 'weekly' | 'monthly';
 

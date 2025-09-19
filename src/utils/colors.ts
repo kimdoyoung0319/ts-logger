@@ -1,4 +1,4 @@
-import { COLOR, LOG_LEVEL } from './../enums';
+import { COLOR, LOG_LEVEL } from './../enums/index.js';
 
 export const DEFAULT_LOG_LEVEL_COLORS = {
   [LOG_LEVEL.DEBUG]: COLOR.BLUE,

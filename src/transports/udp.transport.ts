@@ -1,5 +1,5 @@
-import { Transport, TransportOptions, TransportPayload } from './transport';
-import { createSocket, Socket } from 'dgram';
+import { Transport, TransportOptions, TransportPayload } from './transport.js';
+import { createSocket, Socket } from 'node:dgram';
 
 export type SocketType = 'udp4' | 'udp6';
 
