@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cat >lib/esm/package.json <<!EOF
+{
+    "type": "module"
+}
+!EOF
