@@ -26,7 +26,8 @@
     "build:cjs": "tsc -p ./tsconfig.cjs.json && sh scripts/postbuild-cjs",
     "test": "jest --silent",
     "semantic-release": "semantic-release",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "prepare": "npm run build"
   },
   "release": {
     "branches": [
