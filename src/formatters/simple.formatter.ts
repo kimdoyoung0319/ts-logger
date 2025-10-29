@@ -1,14 +1,25 @@
 import { Formatter, FormatterPayload } from '../interfaces/index.js';
 import { colorize, getTimeStamp, isError, DEFAULT_LOG_LEVEL_COLORS, stringify } from '../utils/index.js';
 import { formatError } from './utils/error-formatter.js';
+import { FormatterOption } from '../interfaces/index.js';
 
 export class SimpleFormatter implements Formatter {
+  option: FormatterOption = {
+    color: true
+  };
+
+  constructor(option?: FormatterOption) {
+    if (option !== undefined) {
+      this.option = option;
+    }
+  }
+
   format({ level, args, options }: FormatterPayload): string {
     const { name, timestamp } = options || {};
 
     let prefix: string = '';
     prefix += timestamp ? `[${getTimeStamp(timestamp)}] ` : '';
-    prefix += `${colorize(DEFAULT_LOG_LEVEL_COLORS[level], level)}`;
+    prefix += this.option.color ? `${colorize(DEFAULT_LOG_LEVEL_COLORS[level], level)}` : `${level}`;
     prefix += name ? ` [${name}]` : '';
 
     const message = this.parse(args);
