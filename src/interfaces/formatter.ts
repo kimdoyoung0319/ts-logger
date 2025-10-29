@@ -9,6 +9,10 @@ export interface FormatterPayload {
   };
 }
 
+export interface FormatterOption {
+  color: boolean;
+}
+
 export interface Formatter {
   format(payload: FormatterPayload): string;
 }
